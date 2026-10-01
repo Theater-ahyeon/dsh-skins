@@ -27,6 +27,23 @@ body :is([data-pane='sidebar'], [class*='_sidebarCol']) > div {
   --dsw-alias-label-tertiary: #a69b91;
   --dsw-specific-sidebar-fill: transparent;
 }
+/* The concept's separate brand band is kept above the character ledger.
+ * It is decoration; the native new-session and rail controls retain semantics. */
+body [data-dsh-surface='sidebar'] > [class*='_root']:has(button[class*='_brand'][class*='_wide'])::before {
+  content: 'D S H';
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-height: 64px;
+  padding: 8px 12px 8px 70px;
+  background: var(--mc-logo) 14px center / 42px 42px no-repeat #101119;
+  border-bottom: 1px solid #caa77588;
+  color: #e0bd8a;
+  font: 28px / 1.3 Georgia, 'Noto Serif SC', SimSun, serif;
+  letter-spacing: 0.12em;
+  box-sizing: border-box;
+  pointer-events: none;
+}
 body [class*='_logoRow'] {
   min-height: 247px;
   padding: 22px 12px 12px;
@@ -184,6 +201,13 @@ body [data-dsh-surface='sidebar'] [class*='_sessionRow'][aria-selected='true'] {
   background-repeat: no-repeat;
   background-position: 2px center;
 }
+body [data-dsh-surface='sidebar'] button[class*='_iconButton'] {
+  background: var(--mc-field) center / 100% 210% no-repeat #12131d;
+  color: #d7ba8c;
+  border: 1px solid #caa77544;
+  border-radius: 3px;
+}
+body [data-dsh-surface='sidebar'] button[class*='_iconButton']:hover { border-color: #e0bd8a; }
 /* The stock Settings action becomes the parchment salon plate. */
 body :is([data-pane='sidebar'], [class*='_sidebarCol']) button[class*='_settings'],
 body [data-slot='sidebar.settings'] button[aria-haspopup='dialog'] {
@@ -342,11 +366,116 @@ body [data-composer-card] :is([role='menu'], [role='listbox'], [class*='_menu'],
 }
 body [data-dsh-surface='settings'] [class*='_providerCard'],
 body [data-dsh-surface='settings'] [class*='_setupCard'],
-body [data-dsh-part='message-body'],
-body [data-dsh-part='tool-card'] {
+body [data-dsh-part='message-body'] {
   border: 10px solid transparent;
   border-image: var(--mc-dossier) 150 / 10px / 0 stretch;
   background-color: var(--mc-panel);
+}
+/* The official 0.1.7 renderer has no message-body/tool-card part on these
+ * nodes. Actual flow/slot/data markers bound the documented suffix seam. */
+body [data-chat-flow-kind='assistant-step'] > [data-slot='conversation.chat.node'] > [class*='_root'] > [class*='_body'] {
+  padding: 16px 20px;
+  color: var(--mc-ink);
+  background: var(--mc-panel);
+  border: 10px solid transparent;
+  border-image: var(--mc-dossier) 150 / 10px / 0 stretch;
+  border-radius: 0;
+  min-width: 0;
+}
+body [data-chat-flow-kind='assistant-step'] [class*='_markdown'] :is(h1, h2, h3) {
+  font-family: 'Noto Serif SC', 'Songti SC', SimSun, Georgia, serif;
+  letter-spacing: 0.06em;
+}
+body [data-dsh-part='message-row'] [class*='_userStack'] > [class*='_bubble'] {
+  border: 8px solid transparent;
+  border-image: var(--mc-dossier) 150 / 8px / 0 stretch;
+  border-radius: 0;
+  background: var(--mc-panel);
+  color: var(--mc-ink);
+}
+body [data-chat-flow-kind='tool-call'] [data-slot='tool.call.toolview'] > [data-tool] {
+  border: 10px solid transparent;
+  border-image: var(--mc-dossier) 150 / 10px / 0 stretch;
+  background: var(--mc-panel);
+  color: var(--mc-ink);
+  min-width: 0;
+}
+body [data-chat-flow-kind='tool-call'] [data-tool] [data-disclosure-row='true'] {
+  padding: 6px 10px;
+  color: var(--mc-ink);
+}
+body [data-chat-flow-kind='tool-call'] button[class*='_fileLink'],
+body button[data-process-activity] {
+  background: var(--mc-action) center / 100% 210% no-repeat #12131d;
+  color: #f5e8d2;
+  border: 1px solid #caa77580;
+  border-radius: 3px;
+}
+body button[data-turn-process] {
+  min-height: 40px;
+  padding: 8px 18px;
+  background: var(--mc-field) center / 100% 210% no-repeat #12131d;
+  color: #f5e8d2;
+  border: 6px solid transparent;
+  border-image: var(--mc-dossier) 150 / 6px / 0 stretch;
+  border-radius: 0;
+  text-align: left;
+}
+body [data-dsh-surface='conversation'] .md-code-block {
+  border: 8px solid transparent;
+  border-image: var(--mc-dossier) 150 / 8px / 0 stretch;
+  border-radius: 0;
+  min-width: 0;
+}
+body [data-dsh-surface='conversation'] [data-code-block-banner='true'] {
+  background: var(--mc-field) center / 100% 210% no-repeat #12131d;
+  color: #e8e1d6;
+  border-bottom: 1px solid #caa77566;
+  --dsw-alias-label-primary: #e8e1d6;
+  --dsw-alias-label-secondary: #c6b9a8;
+  --dsw-alias-label-tertiary: #b5adab;
+}
+body [data-dsh-surface='conversation'] [data-code-block-content='true'] { min-width: 0; }
+body [data-dsh-surface='details'] {
+  /* Explicit image widths paint the frame without opening a closed pane. */
+  border: 0 solid transparent;
+  border-image: var(--mc-dossier) 150 / 10px / 0 stretch;
+}
+/* The mobile rightbar is an absolute panel inside a zero-width column. */
+body [data-dsh-surface='details'] [class$='_panel'] {
+  background: var(--mc-panel);
+  color: var(--mc-ink);
+  border: 0 solid transparent;
+  border-image: var(--mc-dossier) 220 / 14px / 0 stretch;
+}
+body [data-slot='sidebar.right.tab.guide.entry'] > button,
+body [data-slot='sidebar.right.tab.guide'] button {
+  background: var(--mc-action) center / 100% 210% no-repeat #12131d;
+  color: #e8e1d6;
+  border: 1px solid #caa77588;
+  border-radius: 4px;
+  --dsw-alias-label-primary: #e8e1d6;
+  --dsw-alias-label-secondary: #c6b9a8;
+  --dsw-alias-label-tertiary: #a69b91;
+}
+/* The semantic header wrapper is display:contents in rc.1. Decorate the
+ * actual native header so light-theme controls remain readable on the scene. */
+body [data-slot='conversation.header'] > header {
+  background: #12131df5;
+  color: #e8e1d6;
+  border-bottom: 1px solid #caa77566;
+  --dsw-alias-label-primary: #e8e1d6;
+  --dsw-alias-label-secondary: #c6b9a8;
+  --dsw-alias-label-tertiary: #a69b91;
+  --dsw-alias-bg-layer-1: #181b28;
+}
+body [role='tooltip'] {
+  border: 5px solid transparent;
+  border-image: var(--mc-dossier) 150 / 5px / 0 stretch;
+}
+body :is([data-dsh-part='scrollport'], [data-dsh-surface='settings'], [data-dsh-surface='sidebar']) ::-webkit-scrollbar-thumb {
+  background: var(--mc-field) center / 100% 100% no-repeat #967246;
+  border: 1px solid #caa77588;
 }
 body [data-dsh-surface='settings'] :is(input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='color']):not([type='file']), textarea, select) {
   background: var(--mc-field) center / 100% 210% no-repeat #12131d;
@@ -397,9 +526,23 @@ body [data-phase='hero'] [class*='_composerStack']::after {
 }
 body [data-dsh-surface='settings'][role='dialog'] {
   background: var(--mc-panel);
-  border: 1px solid #caa775;
-  border-radius: 12px;
+  border: 16px solid transparent;
+  border-image: var(--mc-dossier) 220 / 28px / 0 stretch;
+  border-radius: 0;
   box-shadow: 0 0 0 4px #12131d, 0 0 0 5px #caa77580, 0 25px 100px #00000080;
+}
+body [data-dsh-surface='settings'] > [class*='_content'] > [class*='_header'] {
+  min-height: 64px;
+  gap: 12px;
+  border-bottom: 1px solid var(--mc-rule);
+}
+body [data-dsh-surface='settings'] > [class*='_content'] > [class*='_header']::before {
+  content: '契约设定';
+  flex: 1;
+  color: var(--mc-ink);
+  font: 22px / 1.4 'Noto Serif SC', 'Songti SC', SimSun, Georgia, serif;
+  letter-spacing: 0.12em;
+  pointer-events: none;
 }
 body [data-dsh-surface='settings'] > nav[class*='_nav'] {
   background: var(--mc-leather) center / 100% 100% no-repeat #12131d;
@@ -434,6 +577,14 @@ body button[class*='_brand']:not([class*='_wide']) {
 body button[class*='_brand']:not([class*='_wide'])::before { content: none; }
 body button[class*='_brand']:not([class*='_wide'])::after { content: none; }
 @media (max-width: 760px) {
+  /* The drawer must paint above the composer and collapsed sidebar. */
+  body [data-rightbar-col][data-dsh-surface='details'] { z-index: 120; }
+  body [data-dsh-surface='details'] [class$='_panel'] { background: var(--dsw-alias-bg-layer-1); }
+  body [data-chat-flow-kind='assistant-step'] > [data-slot='conversation.chat.node'] > [class*='_root'] > [class*='_body'] {
+    padding: 12px 10px;
+    border-width: 7px;
+    border-image-width: 7px;
+  }
   body::before { inset: 2px; border-radius: 6px; }
   body [data-composer-card] { padding: 12px 15px 10px; }
   body [data-composer-card]::before { inset: -1px -5px; border-image-width: 16px 18px; }
@@ -487,6 +638,8 @@ body button[class*='_brand']:not([class*='_wide'])::after { content: none; }
     min-height: 0;
   }
   body [data-dsh-surface='settings'] [class*='_options'] { padding: 12px 16px; }
+  body [data-dsh-surface='settings'][role='dialog'] { border-image-width: 18px; border-width: 10px; }
+  body [data-dsh-surface='settings'] > [class*='_content'] > [class*='_header']::before { font-size: 17px; letter-spacing: 0.04em; }
   body [data-dsh-surface='settings'] [class*='_cubeRow'] { gap: 6px; flex-direction: row; }
   body [data-dsh-surface='settings'] [class*='_themeCube'] { min-width: 0; padding: 10px 8px; }
   body [data-dsh-surface='settings'] [class*='_modelRow'] { grid-template-columns: minmax(0, 1fr); }

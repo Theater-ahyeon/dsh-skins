@@ -53,3 +53,11 @@ node --test scripts/*.test.mjs
 ```
 
 The skin is self-contained pure content with no package or local build step. The Workshop packages it on demand; only blue-fantasy is included in the skin-center npm package. Recheck class-suffix seams and real GUI screenshots when the official web shell changes.
+
+## Actual conversation rendering
+
+These are official-host captures with clearly labeled local protocol-fixture content. Messages pass through the real Agent and readonly tool. No external inference or injected DOM response is involved.
+
+| Tool receipt | Code surface |
+| --- | --- |
+| ![Actual tool rendering](preview/conversation-head-light.png) | ![Code rendering](preview/conversation-code-dark.png) |

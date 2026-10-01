@@ -272,9 +272,118 @@
     }
   ],
   "originalRestored": true,
+  "conversation": {
+    "protocolFixture": true,
+    "realModelInference": false,
+    "externalModelCalls": 0,
+    "domInjection": false,
+    "actualReadonlyToolReceipt": true,
+    "temporaryProviderRemoved": true,
+    "dummyCredentialRemoved": true,
+    "originalVisualSelectionRestored": true,
+    "pageErrors": 0,
+    "cases": [
+      {
+        "theme": "light",
+        "width": 1440,
+        "horizontalOverflow": false,
+        "conversationScroll": {
+          "top": 4545,
+          "height": 5304,
+          "client": 759
+        },
+        "codeScroll": [
+          {
+            "class": "shiki css-variables",
+            "moved": 564,
+            "scrollWidth": 1230,
+            "clientWidth": 666
+          }
+        ],
+        "generatedMaterialsAsserted": true,
+        "screenshots": [
+          "preview/conversation-head-light.png",
+          "preview/conversation-code-light.png",
+          "preview/conversation-tail-light.png"
+        ]
+      },
+      {
+        "theme": "light",
+        "width": 390,
+        "horizontalOverflow": false,
+        "conversationScroll": {
+          "top": 7586,
+          "height": 8305,
+          "client": 719
+        },
+        "codeScroll": [
+          {
+            "class": "shiki css-variables",
+            "moved": 1017,
+            "scrollWidth": 1230,
+            "clientWidth": 213
+          }
+        ],
+        "generatedMaterialsAsserted": true,
+        "screenshots": [
+          "preview/mobile-conversation-head-light.png",
+          "preview/mobile-conversation-code-light.png",
+          "preview/mobile-conversation-tail-light.png"
+        ]
+      },
+      {
+        "theme": "dark",
+        "width": 1440,
+        "horizontalOverflow": false,
+        "conversationScroll": {
+          "top": 4545,
+          "height": 5304,
+          "client": 759
+        },
+        "codeScroll": [
+          {
+            "class": "shiki css-variables",
+            "moved": 564,
+            "scrollWidth": 1230,
+            "clientWidth": 666
+          }
+        ],
+        "generatedMaterialsAsserted": true,
+        "screenshots": [
+          "preview/conversation-head-dark.png",
+          "preview/conversation-code-dark.png",
+          "preview/conversation-tail-dark.png"
+        ]
+      },
+      {
+        "theme": "dark",
+        "width": 390,
+        "horizontalOverflow": false,
+        "conversationScroll": {
+          "top": 7586,
+          "height": 8305,
+          "client": 719
+        },
+        "codeScroll": [
+          {
+            "class": "shiki css-variables",
+            "moved": 1017,
+            "scrollWidth": 1230,
+            "clientWidth": 213
+          }
+        ],
+        "generatedMaterialsAsserted": true,
+        "screenshots": [
+          "preview/mobile-conversation-head-dark.png",
+          "preview/mobile-conversation-code-dark.png",
+          "preview/mobile-conversation-tail-dark.png"
+        ]
+      }
+    ]
+  },
   "limits": [
-    "No model credentials or inference calls",
-    "No fabricated assistant response",
-    "Message/code/tool visual rules not exercised with a live inference response"
+    "No external model inference or streaming-provider compatibility test",
+    "Optional plugin rows absent in minimal profile",
+    "Automation does not establish human visual acceptance"
   ]
 }

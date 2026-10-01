@@ -53,3 +53,11 @@ node --test scripts/*.test.mjs
 ```
 
 本目录为独立纯资产，没有 package 或单独构建步骤，由创意工坊按需打包。皮肤中心 npm 仅内置 blue-fantasy。宿主升级后需重新验证类名后缀接缝与真实界面截图。
+
+## 真实会话验证
+
+以下为官方宿主运行截图，内容明确标注本地协议 Fixture。消息经过真实 Agent 与只读工具；未调用外部模型，也未注入页面回复。
+
+| 工具回执 | 代码界面 |
+| --- | --- |
+| ![真实工具界面](preview/conversation-head-light.png) | ![代码界面](preview/conversation-code-dark.png) |

@@ -1,30 +1,29 @@
 # Verification / 验证说明
 
-These files are captures from the real official DSH 0.1.7-rc.1 Web GUI in an isolated profile, taken on 2026-10-02. They are not generated design mocks. Both themes were exercised at 1440×900 and 390×844.
+Actual captures from the official DSH 0.1.7-rc.1 Web GUI in an isolated profile on 2026-10-02. They are browser screenshots, not generated mockups. Both themes were exercised at 1440×900 and 390×844.
 
 ## GUI evidence
 
-- Four theme/viewport combinations per skin; the complete two-skin run passed 80 interaction checks and two restoration checks.
-- Settings/general and model configuration, opaque permission/model menus, actual sapphire switch toggle and restoration.
-- Draft typing and clearing, sidebar collapse/reopen, details expansion, keyboard Escape and persisted skin activation.
-- Switching to blue-fantasy and no skin removes Midnight Contract styles. Original QA skin/theme restored.
-- Zero page errors and zero failed asset requests. Background source hashes match their contributor-provided originals.
-- Standard preview/light.jpg and preview/dark.jpg were captured directly by the browser (JPEG quality 85); other evidence is native PNG screenshot output.
+- The two-skin interaction matrix passed 80 checks and two restoration checks: settings/models, opaque menus, actual sapphire switch toggle/restore, drafts, sidebar collapse/reopen, details expansion and persisted activation.
+- A separate eight-case conversation matrix exercised real session messages, Markdown, code, tables and actual readonly read-tool receipts. Long conversations reach the tail; long code scrolls inside its code block without page overflow.
+- The conversation content is clearly labeled a deterministic local OpenAI SSE protocol fixture, not model inference. It went through the official Agent, tool execution, session journal and renderer; no DOM injection or external model call was used. The temporary provider and dummy test credential were removed.
+- Computed styles and assertions confirm the generated dossier material on actual assistant/tool/code nodes and field-bed material on code banners. Zero browser page errors, zero failed asset requests in the interaction matrix and zero conversation page overflow.
+- Default/no-skin switching removes Midnight Contract styles. Both test helpers restore the original QA skin/theme. Standard previews are direct browser JPEGs; state evidence is native PNG output.
 
-Machine-readable results: [gui-verification.json](gui-verification.json). Screens: [preview/](preview/).
+Machine-readable evidence: [gui-verification.json](gui-verification.json). Screens: [preview/](preview/). Design mapping: [VISUAL-CONTRACT.md](VISUAL-CONTRACT.md).
 
-## Automated gates
+## Automated gates and boundaries
 
-Skin catalog/safety pipeline (55 catalog entries), reviewed-hook registry, typecheck, build and generated lib drift check pass. Tool script tests pass 27/27 in the normal temporary environment. The untouched dsh-web baseline passes typecheck and docs:check. See the contribution PR for final full-test/CI results.
+Catalog/CSS safety (55 entries), hooks, typecheck, build and generated-lib drift checks pass. Script tests pass 27/27. The untouched dsh-web baseline passes typecheck and docs:check; dsh-skins has no docs:check command.
 
-The contribution's [Ubuntu CI run](https://github.com/zhu1090093659/dsh-skins/actions/runs/36916974113) passed all repository gates, including the complete 776-test suite and 27 script tests. [PR #33](https://github.com/zhu1090093659/dsh-skins/pull/33) records the final review status. The local filesystem limitations below are retained as historical validation evidence.
+The contribution's earlier [Ubuntu CI](https://github.com/zhu1090093659/dsh-skins/actions/runs/36917452138) passed all 776 tests and repository gates. Current branch checks and review status are on [PR #33](https://github.com/zhu1090093659/dsh-skins/pull/33/checks).
 
-## Environment boundaries
+Complete local tests remain environment-limited: Windows passes 775/776 with an existing file-symlink EPERM. Genuine Linux on task-only NTFS passes that symlink test and the previous mtime/cache assertions, but passes 775/776 with the original LRU scan's unchanged 30-second timeout. The dsh-web baseline retains two Windows symlink permission failures. No application source, assertion, timeout, clock or global setting was changed to conceal these failures. CI and local results are separate evidence.
 
-The Windows full-suite run encounters the existing file-symlink permission failure in tests/pkg-extract.spec.ts. Genuine Linux runs execute that symlink test successfully, but the available WSL temporary filesystem reproduces existing immediate root-mtime/cache invalidation assertions. No test assertion, timeout or host implementation was changed to hide these conditions. The upstream base commit has a successful Ubuntu CI run. Full local tests are not described as all-green until a supported complete run proves it.
-
-No model key was entered and no inference request was sent. Live assistant messages, streaming code and actual tool receipts remain untested; their styles use the existing semantic surfaces. Optional plugin rows were not present in this minimal profile. No user acceptance or pixel-perfect claim is inferred from automation.
+External model inference, arbitrary provider streaming behavior and optional plugins absent from the minimal profile remain untested. Protocol-fixture captures establish actual UI rendering and tool execution, not model intelligence or provider compatibility. Automation does not imply user acceptance or perfect artistic equivalence.
 
 ## 中文说明
 
-两版在真实 DSH 宿主覆盖亮暗、桌面／窄屏、设置、模型、菜单、开关、草稿、侧栏与详情，并验证切回默认和无皮肤恢复。原图哈希一致。测试未填入模型凭据、未调用模型、未伪造回复，因此真实流式回复与工具内容仍是验证边界。完整测试中的系统符号链接／mtime 环境失败会在 PR 如实说明，不通过修改测试掩盖。
+两版真实宿主覆盖亮暗、桌面／手机、设置、模型、菜单、开关、草稿、侧栏与详情，并验证默认／无皮肤恢复。另有 8 组真实消息、代码、表格与只读工具回执检查，确认生图材质生效、长内容可滚动且页面不横溢出。对话明确标注本地协议 Fixture，经过官方 Agent 与真实工具，不代表真实模型推理；临时路由及虚拟测试凭据已清理。原背景哈希一致。
+
+本地全套测试保留平台权限和文件扫描超时，未通过改测试掩盖。Ubuntu CI 全套通过与本地未全绿分别记录。外部推理、未安装插件及用户视觉验收属于剩余验证边界。
