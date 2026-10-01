@@ -17,6 +17,8 @@ Machine-readable results: [gui-verification.json](gui-verification.json). Screen
 
 Skin catalog/safety pipeline (55 catalog entries), reviewed-hook registry, typecheck, build and generated lib drift check pass. Tool script tests pass 27/27 in the normal temporary environment. The untouched dsh-web baseline passes typecheck and docs:check. See the contribution PR for final full-test/CI results.
 
+The contribution's [Ubuntu CI run](https://github.com/zhu1090093659/dsh-skins/actions/runs/36916974113) passed all repository gates, including the complete 776-test suite and 27 script tests. [PR #33](https://github.com/zhu1090093659/dsh-skins/pull/33) records the final review status. The local filesystem limitations below are retained as historical validation evidence.
+
 ## Environment boundaries
 
 The Windows full-suite run encounters the existing file-symlink permission failure in tests/pkg-extract.spec.ts. Genuine Linux runs execute that symlink test successfully, but the available WSL temporary filesystem reproduces existing immediate root-mtime/cache invalidation assertions. No test assertion, timeout or host implementation was changed to hide these conditions. The upstream base commit has a successful Ubuntu CI run. Full local tests are not described as all-green until a supported complete run proves it.
