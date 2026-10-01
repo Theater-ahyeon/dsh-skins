@@ -1,0 +1,280 @@
+{
+  "officialHostVersion": "0.1.7-rc.1",
+  "runtime": "real isolated DSH Web GUI",
+  "skin": "midnight-contract",
+  "date": "2026-10-02",
+  "cases": [
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "steps": [
+        {
+          "name": "activate-and-theme",
+          "status": "pass"
+        },
+        {
+          "name": "root-layout",
+          "status": "pass"
+        },
+        {
+          "name": "composer-draft",
+          "status": "pass"
+        },
+        {
+          "name": "permission-menu",
+          "status": "pass"
+        },
+        {
+          "name": "model-menu",
+          "status": "pass"
+        },
+        {
+          "name": "settings",
+          "status": "pass"
+        },
+        {
+          "name": "developer-switch",
+          "status": "pass"
+        },
+        {
+          "name": "models-settings",
+          "status": "pass"
+        },
+        {
+          "name": "sidebar-collapse",
+          "status": "pass"
+        },
+        {
+          "name": "details-expand",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "steps": [
+        {
+          "name": "activate-and-theme",
+          "status": "pass"
+        },
+        {
+          "name": "root-layout",
+          "status": "pass"
+        },
+        {
+          "name": "composer-draft",
+          "status": "pass"
+        },
+        {
+          "name": "permission-menu",
+          "status": "pass"
+        },
+        {
+          "name": "model-menu",
+          "status": "pass"
+        },
+        {
+          "name": "settings",
+          "status": "pass"
+        },
+        {
+          "name": "developer-switch",
+          "status": "pass"
+        },
+        {
+          "name": "models-settings",
+          "status": "pass"
+        },
+        {
+          "name": "sidebar-collapse",
+          "status": "pass"
+        },
+        {
+          "name": "details-expand",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "steps": [
+        {
+          "name": "activate-and-theme",
+          "status": "pass"
+        },
+        {
+          "name": "root-layout",
+          "status": "pass"
+        },
+        {
+          "name": "composer-draft",
+          "status": "pass"
+        },
+        {
+          "name": "permission-menu",
+          "status": "pass"
+        },
+        {
+          "name": "model-menu",
+          "status": "pass"
+        },
+        {
+          "name": "settings",
+          "status": "pass"
+        },
+        {
+          "name": "developer-switch",
+          "status": "pass"
+        },
+        {
+          "name": "models-settings",
+          "status": "pass"
+        },
+        {
+          "name": "sidebar-collapse",
+          "status": "pass"
+        },
+        {
+          "name": "details-expand",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "steps": [
+        {
+          "name": "activate-and-theme",
+          "status": "pass"
+        },
+        {
+          "name": "root-layout",
+          "status": "pass"
+        },
+        {
+          "name": "composer-draft",
+          "status": "pass"
+        },
+        {
+          "name": "permission-menu",
+          "status": "pass"
+        },
+        {
+          "name": "model-menu",
+          "status": "pass"
+        },
+        {
+          "name": "settings",
+          "status": "pass"
+        },
+        {
+          "name": "developer-switch",
+          "status": "pass"
+        },
+        {
+          "name": "models-settings",
+          "status": "pass"
+        },
+        {
+          "name": "sidebar-collapse",
+          "status": "pass"
+        },
+        {
+          "name": "details-expand",
+          "status": "pass"
+        }
+      ]
+    }
+  ],
+  "pageErrors": 0,
+  "failedRequests": 0,
+  "restoration": [
+    {
+      "steps": [
+        {
+          "name": "restore-blue-fantasy",
+          "details": {
+            "skin": "blue-fantasy",
+            "composer": {
+              "tag": "div",
+              "class": "uV2eYG_card",
+              "role": null,
+              "label": null,
+              "rect": {
+                "x": 469.296875,
+                "y": 443.5,
+                "w": 774.390625,
+                "h": 114
+              },
+              "visible": true,
+              "withinViewport": true,
+              "centerHit": true,
+              "display": "flex",
+              "position": "relative",
+              "fg": "rgb(219, 226, 242)",
+              "bg": "rgb(26, 34, 56)",
+              "overflow": "visible",
+              "scrollWidth": 774,
+              "clientWidth": 774
+            },
+            "screenshot": "restored-blue-fantasy.png",
+            "staleMidnightStylesheets": 0
+          },
+          "status": "pass"
+        },
+        {
+          "name": "restore-stock",
+          "details": {
+            "skin": null,
+            "composer": {
+              "tag": "div",
+              "class": "uV2eYG_card",
+              "role": null,
+              "label": null,
+              "rect": {
+                "x": 469.296875,
+                "y": 443,
+                "w": 774.390625,
+                "h": 114
+              },
+              "visible": true,
+              "withinViewport": true,
+              "centerHit": true,
+              "display": "flex",
+              "position": "relative",
+              "fg": "rgb(249, 250, 251)",
+              "bg": "rgb(44, 44, 46)",
+              "overflow": "visible",
+              "scrollWidth": 774,
+              "clientWidth": 774
+            },
+            "screenshot": "restored-stock.png",
+            "staleMidnightStylesheets": 0
+          },
+          "status": "pass"
+        }
+      ]
+    }
+  ],
+  "originalRestored": true,
+  "limits": [
+    "No model credentials or inference calls",
+    "No fabricated assistant response",
+    "Message/code/tool visual rules not exercised with a live inference response"
+  ]
+}
