@@ -1,6 +1,8 @@
 /** Midnight Contract: L1 palette and L2 semantic surfaces. No executable hooks. */
 :root, body {
   --mc-gold: #caa775;
+  --mc-serif: 'Noto Serif SC', 'Songti SC', 'STSong', SimSun, Georgia, serif;
+  --mc-ui: 'Segoe UI', 'Microsoft YaHei UI', 'PingFang SC', system-ui, sans-serif;
   --mc-ink: #342a25;
   --mc-panel: #f3ebdeed;
   --mc-recess: #e9dfce;
@@ -74,6 +76,7 @@
   --dsw-specific-selector: #e9dfce;
   --dsw-specific-tip: #e9dfce;
   color: var(--mc-ink);
+  font-family: var(--mc-ui);
 }
 body[data-ds-dark-theme] {
   --mc-ink: #e8e1d6;
@@ -152,7 +155,7 @@ body[data-ds-dark-theme] {
   background: linear-gradient(110deg, #652d42, #43212f 75%, #8a6943);
   color: #fff0d9;
   box-shadow: inset 0 0 0 3px #13141d, inset 0 0 0 4px #caa77570;
-  font-family: 'Noto Serif SC', 'Songti SC', SimSun, Georgia, serif;
+  font-family: var(--mc-serif);
   font-size: 17px;
   letter-spacing: 0.1em;
 }
@@ -185,7 +188,7 @@ body[data-ds-dark-theme] {
   padding: 20px 24px;
 }
 [data-dsh-part='message-body'] :is(h1, h2, h3) {
-  font-family: 'Noto Serif SC', 'Songti SC', SimSun, Georgia, serif;
+  font-family: var(--mc-serif);
   letter-spacing: 0.06em;
 }
 [data-dsh-part='composer-input'] {

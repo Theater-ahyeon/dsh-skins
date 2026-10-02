@@ -51,7 +51,20 @@
           "name": "details-expand",
           "status": "pass"
         }
-      ]
+      ],
+      "alignment": {
+        "wordmark": "\"Deepseek Harness\"",
+        "portrait": "none",
+        "rowHeight": 64,
+        "wordmarkFits": true,
+        "labelWidth": 46.359375,
+        "labelClearsActions": true,
+        "labelClearsSpine": true,
+        "labelInsidePlaque": true,
+        "centersAligned": true,
+        "duplicateGearHidden": true,
+        "settingsTextClearsRaven": true
+      }
     },
     {
       "theme": "light",
@@ -100,7 +113,20 @@
           "name": "details-expand",
           "status": "pass"
         }
-      ]
+      ],
+      "alignment": {
+        "wordmark": "\"Deepseek Harness\"",
+        "portrait": "none",
+        "rowHeight": 64,
+        "wordmarkFits": true,
+        "labelWidth": 46.359375,
+        "labelClearsActions": true,
+        "labelClearsSpine": true,
+        "labelInsidePlaque": true,
+        "centersAligned": true,
+        "duplicateGearHidden": true,
+        "settingsTextClearsRaven": true
+      }
     },
     {
       "theme": "dark",
@@ -149,7 +175,20 @@
           "name": "details-expand",
           "status": "pass"
         }
-      ]
+      ],
+      "alignment": {
+        "wordmark": "\"Deepseek Harness\"",
+        "portrait": "none",
+        "rowHeight": 64,
+        "wordmarkFits": true,
+        "labelWidth": 46.359375,
+        "labelClearsActions": true,
+        "labelClearsSpine": true,
+        "labelInsidePlaque": true,
+        "centersAligned": true,
+        "duplicateGearHidden": true,
+        "settingsTextClearsRaven": true
+      }
     },
     {
       "theme": "dark",
@@ -198,7 +237,20 @@
           "name": "details-expand",
           "status": "pass"
         }
-      ]
+      ],
+      "alignment": {
+        "wordmark": "\"Deepseek Harness\"",
+        "portrait": "none",
+        "rowHeight": 64,
+        "wordmarkFits": true,
+        "labelWidth": 46.359375,
+        "labelClearsActions": true,
+        "labelClearsSpine": true,
+        "labelInsidePlaque": true,
+        "centersAligned": true,
+        "duplicateGearHidden": true,
+        "settingsTextClearsRaven": true
+      }
     }
   ],
   "pageErrors": 0,
@@ -288,8 +340,8 @@
         "width": 1440,
         "horizontalOverflow": false,
         "conversationScroll": {
-          "top": 4545,
-          "height": 5304,
+          "top": 4547,
+          "height": 5306,
           "client": 759
         },
         "codeScroll": [
@@ -312,8 +364,8 @@
         "width": 390,
         "horizontalOverflow": false,
         "conversationScroll": {
-          "top": 7586,
-          "height": 8305,
+          "top": 7588,
+          "height": 8307,
           "client": 719
         },
         "codeScroll": [
@@ -336,8 +388,8 @@
         "width": 1440,
         "horizontalOverflow": false,
         "conversationScroll": {
-          "top": 4545,
-          "height": 5304,
+          "top": 4547,
+          "height": 5306,
           "client": 759
         },
         "codeScroll": [
@@ -360,8 +412,8 @@
         "width": 390,
         "horizontalOverflow": false,
         "conversationScroll": {
-          "top": 7586,
-          "height": 8305,
+          "top": 7588,
+          "height": 8307,
           "client": 719
         },
         "codeScroll": [

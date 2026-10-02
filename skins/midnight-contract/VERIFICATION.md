@@ -27,3 +27,9 @@ External model inference, arbitrary provider streaming behavior and optional plu
 两版真实宿主覆盖亮暗、桌面／手机、设置、模型、菜单、开关、草稿、侧栏与详情，并验证默认／无皮肤恢复。另有 8 组真实消息、代码、表格与只读工具回执检查，确认生图材质生效、长内容可滚动且页面不横溢出。对话明确标注本地协议 Fixture，经过官方 Agent 与真实工具，不代表真实模型推理；临时路由及虚拟测试凭据已清理。原背景哈希一致。
 
 本地全套测试保留平台权限和文件扫描超时，未通过改测试掩盖。Ubuntu CI 全套通过与本地未全绿分别记录。外部推理、未安装插件及用户视觉验收属于剩余验证边界。
+
+## 0.1.1 alignment revision
+
+The latest 80-check GUI run additionally measures the exact Deepseek Harness wordmark fit, a portrait-free 64px brand row, workspace heading clearance from the folio spine and engraved rule, label/action vertical centers, and the Settings text clearance from the generated raven. The duplicate gear is hidden in the expanded sidebar and restored in the native compact rail. Checks wait for the actual collapsed state before inspecting the rail. All assertions pass in both skins, both themes and both viewport sizes. Direct component captures: [workspace](preview/workspace-dark.png), [Settings entry](preview/settings-entry-dark.png).
+
+The focused upstream CSS safety/class coverage/builtin tests pass 126/126 after these changes. Independent repository syntax, validator tests, docs and asset-integrity checks are distinct from the upstream host full-suite and CI history described above.

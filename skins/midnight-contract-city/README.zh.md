@@ -2,7 +2,7 @@
 
 [English](README.md) | 中文
 
-为真实 DeepSeek Harness Web GUI 制作的路鸣泽／龙族主题皮肤。夜城版使用贡献者指定的原始背景，同源头像与独立生图材质共同组成契约界面；[另一版本](../midnight-contract/README.zh.md)沿用同一套组件语言并更换场景。
+为真实 DeepSeek Harness Web GUI 制作的路鸣泽／龙族主题皮肤。夜城版使用贡献者指定的原始背景，紧凑的 Deepseek Harness 品牌栏与独立生图材质共同组成契约界面；[另一版本](../midnight-contract/README.zh.md)沿用同一套组件语言并更换场景。
 
 ## 真实预览
 
@@ -16,7 +16,7 @@
 
 ## 定制范围
 
-- 龙纹皮革侧栏、同源人物头像、四分之一生命徽章与绯红邀约底板。
+- 龙纹皮革侧栏、Deepseek Harness 品牌栏与绯红邀约底板；按最新要求取消左上角头像区域。
 - 生图制作工作区卷宗、金属书脊、鸦羽角饰及工作区／会话图标，保留原生滚动、搜索和管理操作。
 - 蓝宝石信封输入框和红色发送封蜡；附件、权限和模型选择继续使用真实控件。
 - 下拉菜单、模型卡片与消息／工具区域复用生成的契约框；输入字段、操作按钮与开关分别使用独立材质和蓝宝石拨钮。
@@ -25,7 +25,7 @@
 
 ## 安装与恢复
 
-贡献合入并完成市场构建后，可从 DSH 创意工坊安装，在“设置 > 皮肤”中选择。市场上架之前，可将本目录完整复制到皮肤中心用户目录，默认是 `$DSH_HOME/skins/midnight-contract-city/`，再从真实 DSH GUI 设置页选择；显式设置 `DSH_SKINS_HOME` 时以该目录为准。
+将本目录完整复制到皮肤中心用户目录，默认是 `$DSH_HOME/skins/midnight-contract-city/`，再从真实 DSH GUI 设置页选择；显式设置 `DSH_SKINS_HOME` 时以该目录为准。
 
 这是皮肤资产包，需 DSH Web 宿主及皮肤中心 v2 加载器，不能当作独立 HTML 打开。切回其他皮肤或无皮肤即可恢复。背景优先级继续由控制器管理：Wallpaper Engine > 用户手动背景 > 皮肤背景。
 
@@ -37,22 +37,20 @@
 
 ## 素材与许可
 
-详见[素材声明](NOTICE.md)、[来源记录](asset-provenance.json)、[生成提示词](generation-prompts.json)及仓库 [Apache-2.0 许可](../../LICENSE)。背景由贡献者提供并确认公开再分发权，文件哈希记录在来源清单中，头像仅通过 CSS 裁切同一原图。包中不包含此前的 Steam 创意工坊角色壁纸。UI 装饰由 OpenAI image_gen 生成，不主张龙族 IP 的所有权或官方背书。
+详见[素材声明](NOTICE.md)、[来源记录](asset-provenance.json)、[生成提示词](generation-prompts.json)及仓库 [Apache-2.0 许可](LICENSE)。背景由贡献者提供并确认公开再分发权，文件哈希记录在来源清单中；左上角头像区域已移除。包中不包含此前的 Steam 创意工坊角色壁纸。UI 装饰由 OpenAI image_gen 生成，不主张龙族 IP 的所有权或官方背书。
 
 ## 开发与验证
 
-本目录使用标准脚手架 `node scripts/dsh-skin-new.cjs midnight-contract-city` 生成。在 dsh-skins 根目录运行：
+本目录最初在 dsh-skins 使用标准脚手架 `node scripts/dsh-skin-new.cjs midnight-contract-city` 生成。[独立分发仓库](https://github.com/Theater-ahyeon/midnight-contract-skins)提供以下实际检查：
 
 ```sh
-pnpm skin-center:check
-pnpm skin-hooks:check
-pnpm build
 pnpm typecheck
 pnpm test
-node --test scripts/*.test.mjs
+pnpm docs:check
+pnpm check
 ```
 
-本目录为独立纯资产，没有 package 或单独构建步骤，由创意工坊按需打包。皮肤中心 npm 仅内置 blue-fantasy。宿主升级后需重新验证类名后缀接缝与真实界面截图。
+此处 `typecheck` 为 JavaScript 语法检查，不是 TypeScript 类型检查。这些命令校验资源和文档，真实宿主运行证据另见 VERIFICATION.md。上游贡献还经过官方目录／CSS 安全、hooks、构建和类型检查。本皮肤无需单独构建；宿主升级后需复核类名接缝与截图。[创意工坊贡献 PR](https://github.com/zhu1090093659/dsh-skins/pull/33)仍需上游审阅，独立分发不表示已在市场上架。
 
 ## 真实会话验证
 

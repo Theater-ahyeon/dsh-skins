@@ -4,7 +4,7 @@
     "sha256": "bd359f0d98a2d3ac20ce246010a160492883dd21d3c494ebd765f85e3fbd9622",
     "source": "Contributor-provided image",
     "authorization": "Contributor confirmed the right to authorize public use on 2026-10-02",
-    "processing": "Original file copied byte-for-byte; CSS-only portrait crop; no background redraw"
+    "processing": "Original file copied byte-for-byte; No background redraw; sidebar portrait removed"
   },
   "materials": {
     "service": "OpenAI image_gen",
