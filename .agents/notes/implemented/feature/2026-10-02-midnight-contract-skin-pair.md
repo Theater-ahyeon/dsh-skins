@@ -44,3 +44,7 @@ Following maintainer comment 5953289445, both bilingual READMEs, NOTICE and prov
 ## Fresh intake submission
 
 The contributor explicitly requested resubmission after GitHub refused to reopen PR 33. Create a dedicated branch from current upstream main 13deb94 and carry only the two corrected skin packages, matching evidence screenshots and this owning note. This refreshes the trusted intake baseline so its policy scripts exist. Preserve the previously validated visual bytes, do not alter submission policy or host behavior, and rerun the complete gates against the latest baseline before creating the replacement PR.
+
+## Contributor responsibility revision
+
+On 2026-10-04 the contributor instructed Codex to write the responsibility undertaking requested by maintainer comment 5970429689. Both skins' SOURCE-DECLARATION and NOTICE, plus the PR description, now expressly assign artwork copyright/compliance responsibility to Theater-ahyeon and warrant the right to provide and distribute the assets within the stated personal non-commercial scope. The statement retains the existing removal undertaking and does not claim official Dragon Raja authorization or introduce broader indemnity terms. Only declaration documents change; artwork, CSS, manifests, evidence and runtime behavior remain unchanged.
